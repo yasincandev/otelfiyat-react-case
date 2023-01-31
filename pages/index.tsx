@@ -1,11 +1,10 @@
-import { Hotels } from "@/components";
-import { Hotel } from "@/types/hotel";
-import { NextPage } from "next";
-import Head from "next/head";
+import { Hotels } from '@/components';
+import { NextPage } from 'next';
+import Head from 'next/head';
 
-const Home: NextPage = ({}) => {
+const Home: NextPage = () => {
   return (
-    <div className='container mx-auto flex flex-col'>
+    <div className="container mx-auto flex flex-col">
       <Head>
         <title>Home</title>
       </Head>

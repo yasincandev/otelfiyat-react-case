@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 
 type ReservationModalProps = {
   open: boolean;
+  // eslint-disable-next-line no-unused-vars
   setOpen: (open: boolean) => void;
 };
 

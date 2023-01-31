@@ -1,13 +1,9 @@
-import React, { useRef, useState } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import { Hotel as IHotel } from '@/types/hotel';
 import { hotelData } from '@/data/data';
-import { useRouter } from 'next/router';
 import Hotel from '../Hotel/Hotel';
 
 const Hotels: React.FC = () => {
-  const router = useRouter();
-
   return (
     <div
       className="flex flex-col container mx-auto items-center"

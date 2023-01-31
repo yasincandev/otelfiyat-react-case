@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
 import { NextPage } from 'next';
 import { hotelData } from '@/data/data';
 import ReservationModal from '@/components/ReservationModal/ReservationModal';
+import { Room } from '@/types/hotel';
 
 const Hotel: NextPage = ({}) => {
   const router = useRouter();
@@ -59,7 +59,7 @@ const Hotel: NextPage = ({}) => {
       <div className="flex flex-col gap-5 items-center w-full p-8">
         <h2 className="text-2xl font-bold text-center">ODALAR</h2>
 
-        {hotel?.rooms.map((room: any) => (
+        {hotel?.rooms.map((room: Room) => (
           <div
             className="flex items-center justify-center w-full lg:w-7/12  p-6 bg-white  rounded-lg shadow-md  hover:shadow-xl transition duration-300 ease-in-out cursor-pointer hover:bg-gray-100 transform hover:-translate-y-1 hover:scale-105"
             key={room.id}
@@ -90,7 +90,6 @@ const Hotel: NextPage = ({}) => {
                 Oda Tipi: {room.name}
               </h3>
               <p className="text-gray-600 mb-2">Gecelik: ₺{room.price}</p>
-              <p className="text-gray-600 mb-2">{room.description}</p>
             </div>
           </div>
         ))}
