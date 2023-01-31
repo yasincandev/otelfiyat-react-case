@@ -65,7 +65,7 @@ const Hotel: NextPage = ({}) => {
             key={room.id}
             onClick={() => setOpen(true)}
           >
-            <div className="w-1/3">
+            <div className="md:w-1/3 w-1/2">
               <Swiper
                 modules={[Pagination]}
                 slidesPerView={1}
