@@ -14,7 +14,7 @@ const SearchResults: NextPage = () => {
   };
 
   const filteredHotels = hotelData.filter((hotel) => {
-    return hotel.location.toLowerCase() === location.toLowerCase();
+    return hotel?.location?.toLowerCase() === location?.toLowerCase();
   });
 
   const { adult, child } = query;
